@@ -15,11 +15,19 @@
 
 .f-info {
   background-color: #eeeeee;
-  /* background-color: black !important; */
-  height: 10rem;
+  /* background-color: black !important;
+  height: 8rem !important; */
   width: 100vw;
   justify-content: space-around;
   align-items: center;
   justify-items: center;
   width: 100vw !important;
+}
+
+/* Index listings css */
+#card-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

@@ -1,0 +1,40 @@
+<%- layout("../layouts/boilerplate.ejs") %>
+
+<body>
+  <div class="card text-center">
+    <div class="card-header">
+      <h5 class="card-title"><%= hospital.name %></h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <b>
+          Available Beds: <%= hospital.capacity.availableBeds %>/<%=
+          hospital.capacity.totalBeds %></b
+        >
+      </p>
+      <p class="card-text">
+        <b> Emergency Room: <%= hospital.emergencyAvailable %> </b>
+      </p>
+      <b>specialization:</b><% for(el of hospital.specialization){ %>
+      <span class="card-text"><%= el %>, </span>
+      <% } %>
+      <br />
+      <br />
+      <br />
+
+      <p class="card-text">
+        <b>Address:</b>
+        <%= hospital.address.street %>, <%= hospital.address.city%>,
+        <%=hospital.address.state %>, <%=hospital.address.pincode %>
+      </p>
+      <p class="card-text"><b>contacts:</b></p>
+      <p class="card-text"><%= hospital.contactNumber %></p>
+      <p class="card-text"><%= hospital.email %></p>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <form action="">
+        <button class="btn btn-success">Book bed</button>
+      </form>
+    </div>
+  </div>
+</body>

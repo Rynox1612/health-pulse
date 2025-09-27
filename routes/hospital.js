@@ -1,14 +1,16 @@
 const express = require("express");
 const router = express.Router();
+const Hospital = require("../models/hospitals");
 
 //Index route
-router.get("/", (req, res) => {
-  res.render("index");
+router.get("/", async (req, res) => {
+  const hospitals = await Hospital.find({});
+  res.render("index", { hospitals });
 });
 
 //New form
 router.get("/new", (req, res) => {
-  res.send("index route");
+  res.render("new");
 });
 
 //create route
@@ -17,8 +19,10 @@ router.post("/", (req, res) => {
 });
 
 //Show route
-router.get("/:id", (req, res) => {
-  res.send("show Route");
+router.get("/:id", async (req, res) => {
+  let { id } = req.params;
+  const hospital = await Hospital.findById(id);
+  res.render("show", { hospital });
 });
 
 //Edit form

@@ -1,1 +1,23 @@
 <%- layout("../layouts/boilerplate") %>
+
+<body>
+  <div id="card-container">
+    <% for(hospital of hospitals){ %>
+    <div class="card text-center m-3" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title"><%= hospital.name %></h5>
+        <p class="card-text">
+          <b>Available Beds:<%= hospital.capacity.availableBeds %></b>
+        </p>
+        <p class="card-text">
+          <%= hospital.address.street %>, <%= hospital.address.city%>,
+          <%=hospital.address.state %>, <%=hospital.address.pincode %>
+        </p>
+        <a href="/healthCare/<%=hospital.id%>" class="btn btn-primary"
+          >see more</a
+        >
+      </div>
+    </div>
+    <%} %>
+  </div>
+</body>
