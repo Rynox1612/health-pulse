@@ -1,1 +1,70 @@
 <%- layout("../layouts/boilerplate") %>
+
+<form action="/healthCare" method="post">
+  <h3>Add your Healthcare centre</h3>
+  <div class="mb-3 col-6 offset-3">
+    <label for="name" class="form-label">Name:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="hospital[name]"
+      placeholder="name of your centre"
+    />
+  </div>
+  <div class="mb-3 col-6 offset-3">
+    <label for="address" class="form-label">Address:</label>
+    <input
+      type="text"
+      class="form-control mb-2"
+      id="address"
+      name="hospital[address][street]"
+      placeholder="Street"
+    />
+    <input
+      type="text"
+      class="form-control mb-2"
+      id="address"
+      name="hospital[address][city]"
+      placeholder="Enter city"
+    />
+    <input
+      type="text"
+      class="form-control mb-2"
+      id="address"
+      name="hospital[address][state]"
+      placeholder="State"
+    />
+    <input
+      type="text"
+      class="form-control mb-2"
+      id="address"
+      name="hospital[address][pincode]"
+      placeholder="pincode"
+    />
+  </div>
+  <div class="mb-3 col-6 offset-3">
+    <label for="Contact-no" class="form-label">Contact no:</label>
+    <input
+      type="text"
+      class="form-control"
+      ic="contact-no"
+      name="hospital[contactNumber]"
+      placeholder="Enter your Number"
+    />
+  </div>
+  <div class="mb-3 col-6 offset-3">
+    <label for="contact-email;" class="form-label">Email:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="contact-email"
+      name="hospital[email]"
+      placeholder="Enter your email"
+    />
+  </div>
+  <br /><br /><br />
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-success">save</button>
+  </div>
+</form>

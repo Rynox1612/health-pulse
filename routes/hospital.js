@@ -15,6 +15,8 @@ router.get("/new", (req, res) => {
 
 //create route
 router.post("/", (req, res) => {
+  const hospital = req.body.hospital;
+  console.log(hospital);
   res.send("create Route");
 });
 

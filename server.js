@@ -10,6 +10,8 @@ app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 let MONGOOSE_URL = "mongodb://127.0.0.1:27017/pulseCity";
 main()
