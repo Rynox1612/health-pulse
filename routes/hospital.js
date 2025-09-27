@@ -3,12 +3,12 @@ const router = express.Router();
 
 //Index route
 router.get("/", (req, res) => {
-  res.send("index route");
+  res.render("home.ejs");
 });
 
 //New form
 router.get("/new", (req, res) => {
-  res.send("New form");
+  res.send("index route");
 });
 
 //create route
