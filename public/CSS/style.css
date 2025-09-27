@@ -1,6 +1,5 @@
 .container {
-  margin: 0 !important;
-  /* flex: 1 !important; */
+  width: 100vw !important;
 }
 .color-b {
   color: #2f80ed !important;
@@ -19,4 +18,8 @@
   /* background-color: black !important; */
   height: 10rem;
   width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  width: 100vw !important;
 }

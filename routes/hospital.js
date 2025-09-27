@@ -3,7 +3,7 @@ const router = express.Router();
 
 //Index route
 router.get("/", (req, res) => {
-  res.render("home.ejs");
+  res.render("index");
 });
 
 //New form
