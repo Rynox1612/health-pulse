@@ -14,10 +14,10 @@ router.get("/new", (req, res) => {
 });
 
 //create route
-router.post("/", (req, res) => {
-  const hospital = req.body.hospital;
-  console.log(hospital);
-  res.send("create Route");
+router.post("/", async (req, res) => {
+  const hospital = new Hospital(req.body.hospital);
+  await hospital.save();
+  res.redirect("/healthCare");
 });
 
 //Show route
@@ -27,19 +27,19 @@ router.get("/:id", async (req, res) => {
   res.render("show", { hospital });
 });
 
-//Edit form
-router.get("/:id/edit", (req, res) => {
-  res.send("edit form");
-});
+// //Edit form
+// router.get("/:id/edit", (req, res) => {
+//   res.send("edit form");
+// });
 
-//Update Route
-router.post("/:id", (req, res) => {
-  res.send("update route");
-});
+// //Update Route
+// router.post("/:id", (req, res) => {
+//   res.send("update route");
+// });
 
-//Destroy route
-router.delete("/:id", (req, res) => {
-  res.send("delete route");
-});
+// //Destroy route
+// router.delete("/:id", (req, res) => {
+//   res.send("delete route");
+// });
 
 module.exports = router;

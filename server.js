@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/map", (req, res) => {
+  res.render("map");
+});
+
 app.use("/healthCare", hospitalRoute);
 
 app.listen(3000, () => {
